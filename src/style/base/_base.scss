@@ -1,0 +1,14 @@
+// default setting
+
+$text-decoration: none;
+$font-weight: bold;
+
+%a{
+  text-decoration: $text-decoration;
+  font-weight: bold;
+}
+
+@mixin color-links($color) {
+  color: $color;
+}
+

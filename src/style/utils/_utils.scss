@@ -1,0 +1,28 @@
+// select main color theme.
+@function select-color($key: 'primary') {
+  @return map-get($base-color, $key);
+}
+
+@function select-color($key: 'secondary') {
+  @return map-get($base-color, $key);
+}
+
+@function select-color($key: 'links') {
+  @return map-get($base-color, $key);
+}
+
+@function select-color($key: 'warning') {
+  @return map-get($base-color, $key);
+}
+
+@function select-color($key: 'disabled') {
+  @return map-get($base-color, $key);
+}
+
+@function select-color($key: 'font-primary') {
+  @return map-get($base-color, $key);
+}
+
+@function select-color($key: 'font-secondary') {
+  @return map-get($base-color, $key);
+}

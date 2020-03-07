@@ -1,0 +1,39 @@
+//values
+$input-padding: 1rem 0.5rem;
+$input-margin: 1rem 0rem;
+$input-border: 2px;
+$input-bdradius: 5px;
+
+%input{
+  padding: $input-padding;
+  margin: $input-margin;
+  @include type-setting(0);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-width: $input-border;
+  border-radius: $input-bdradius;
+  border-style: solid;
+
+  &:focus{
+    outline: none;
+  }
+
+  &::placeholder{
+    line-height: 20px;
+    transition: line-height 0.3s ease;
+  }
+
+  &:focus::placeholder{
+    line-height: 100px;
+    transition: line-height 0.3s ease;
+  }
+}
+
+@mixin input-theme($bd-color, $bg-color){
+  border-color: $bd-color;
+  background-color: $bg-color;
+
+  &.placeholder{
+    color: $bd-color;
+  }
+}

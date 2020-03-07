@@ -1,0 +1,19 @@
+//values
+$button-padding: 0.5rem 1rem;
+$button-border-width: 1px;
+
+%button {
+  display: inline-block;
+  padding: $button-padding;
+  @include type-setting(1);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-width: $button-border-width;
+  border-style: solid;
+}
+
+@mixin button-theme($bg-color,$font-color) {
+  color: $font-color;
+  border-color: $bg-color;
+  background-color: $bg-color;
+}

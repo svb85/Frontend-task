@@ -1,0 +1,10 @@
+
+%section{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin setting-section($width,$bg-color){
+  width: $width;
+  background-color: $bg-color;
+}
