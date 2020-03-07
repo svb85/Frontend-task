@@ -18,6 +18,11 @@ $input-bdradius: 5px;
     outline: none;
   }
 
+  &:focus ~ div>label{
+    top: -15px;
+    @include type-setting(-1);
+  }
+
   &::placeholder{
     line-height: 20px;
     transition: line-height 0.3s ease;

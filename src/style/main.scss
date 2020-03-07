@@ -54,7 +54,11 @@ html {
               padding: 1.5rem 0.8rem;
               position: absolute;
               color: #b1b1b1;
+              pointer-events: none;
               @include type-setting(1);
+              transition: 0.2s ease all;
+              -moz-transition: 0.2s ease all;
+              -webkit-transition: 0.2s ease all;
             }
           }
 
