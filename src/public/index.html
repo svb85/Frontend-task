@@ -15,26 +15,36 @@
             <article>
                 <h1>Let's set up your account</h1>
                 <p>Already have an account?<a href="#">Sign in</a></p>
-                <form>
-                    <div>
-                       <label>Your name</label>
+                <form novalidate>
+                    <div class="group_input">
+                        <input type="text" class="form-input" required/>
+                        <label>Your name</label>
                     </div>
-                    <input type="text" class="form-input" />
-                    <div>
-                       <label>Email address</label>
+                    <div class="group_input">
+                        <input type="email" name="mail" id="mail" class="form-input" required/>
+                        <label>Email address</label>
+                        <span class="error" aria-live="polite"></span>
                     </div>
-                    <input type="text" class="form-input" />
-                    <div>
-                       <label>I would describe my user type as</label>
+                    <div class="group_select">
+                        <label for="select" class="select">
+                            <input type="radio" name="list" value="not_changed" id="bg" checked />
+                            <input type="radio" name="list" value="not_changed" id="select">
+                            <label class="bg" for="bg"></label>
+                            <div class="items">
+                                <input type="radio" name="list" value="first_value" id="list[0]">
+                                <label for="list[0]">Developer</label>
+                                <input type="radio" name="list" value="second_value" id="list[1]">
+                                <label for="list[1]">Designer</label>
+                                <input type="radio" name="list" value="second_value" id="list[2]">
+                                <label for="list[2]">Copywriter</label>
+                                <span id="text">I would describe my user as</span>
+                            </div>
+                        </label>
                     </div>
-                    <select class="form-input">
-                        <option>Step 1</option>
-                        <option>Step 2</option>
-                    </select>
-                    <div>
+                    <div class="group_input">
+                        <input type="password" class="form-input" required/>
                         <label>Password</label>
                     </div>
-                    <input type="password" class="form-input"/>
                     <p>Minimum 8 characters</p>
                     <button type="submit" class="form-button_disabled" disabled>
                         Next

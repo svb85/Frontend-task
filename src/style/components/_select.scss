@@ -1,0 +1,108 @@
+// create select
+
+@mixin create-select{
+  .select{
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    padding: 0;
+    pointer-events: auto !important;
+    margin: 1rem 0 4.5rem;
+    position: relative;
+
+    input {
+      display: none;
+    }
+
+    #text {
+      position: absolute;
+      display: block;
+      top: 0;
+      padding: 0.36rem 0.7rem;
+      @include type-setting(1);
+    }
+
+    &:before{
+      content: ">";
+      display: inline-block;
+      background: #f9f9f9;
+      position: absolute;
+      right: -0.7rem;
+      top: 1.15rem;
+      z-index: 2;
+      width: 3.2rem;
+      height: 1.2rem;
+      text-align: center;
+      line-height: 26px;
+      transform: rotate(90deg);
+      cursor: pointer;
+    }
+
+    input[name="list"]:not(:checked) ~ #text {
+      color: #b1b1b1;
+      background: #f9f9f9;
+    }
+
+    input[name="list"]:checked ~ #text {
+      background: transparent;
+      color: transparent;
+      z-index: 2;
+    }
+
+    #select:disabled ~ .items #text {
+      background: #eee;
+    }
+
+    .items{
+      display: block;
+      min-height: 30px;
+      position: absolute;
+      border: 2px solid #b1b1b1;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 99%;
+      cursor: pointer;
+    }
+
+    #select:not(:checked) ~ .items {
+      height: 3.2rem;
+    }
+
+    .items label {
+      border-top: 2px solid #ddd;
+      display: none;
+      padding: 0.7rem;
+      background: #f9f9f9;
+    }
+
+    .items label:hover {
+      background: #eee;
+      cursor: pointer;
+    }
+
+    #select:checked ~ .items {
+      padding-top: 3.2rem;
+    }
+
+    #select:checked ~ .items label {
+      display: block;
+    }
+
+    .items input:checked + label {
+      display: block!important;
+      border: none;
+      background: #f9f9f9;
+    }
+
+    #select:checked ~ .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      background: rgba(0,0,0,0);
+    }
+  }
+
+}

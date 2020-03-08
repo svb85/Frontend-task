@@ -1,5 +1,5 @@
 //values
-$input-padding: 1rem 0.5rem;
+$input-padding: 1rem 0.8rem;
 $input-margin: 1rem 0rem;
 $input-border: 2px;
 $input-bdradius: 5px;
@@ -8,8 +8,7 @@ $input-bdradius: 5px;
   padding: $input-padding;
   margin: $input-margin;
   @include type-setting(0);
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #000000;
   border-width: $input-border;
   border-radius: $input-bdradius;
   border-style: solid;
@@ -18,19 +17,12 @@ $input-bdradius: 5px;
     outline: none;
   }
 
-  &:focus ~ div>label{
-    top: -15px;
-    @include type-setting(-1);
-  }
-
-  &::placeholder{
-    line-height: 20px;
-    transition: line-height 0.3s ease;
-  }
-
-  &:focus::placeholder{
-    line-height: 100px;
-    transition: line-height 0.3s ease;
+  &:focus ~ label,&:valid ~ label{
+    top: -0.6rem;
+    background: #f9f9f9;
+    padding: 1rem 0.2rem 0 0.2rem;
+    margin-left: 0.5rem;
+    @include type-setting(0);
   }
 }
 
