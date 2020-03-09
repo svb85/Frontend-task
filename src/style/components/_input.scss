@@ -17,15 +17,11 @@ $input-bdradius: 5px;
     outline: none;
   }
 
-  &:focus ~ label,&:valid ~ label{
-    top: -0.6rem;
-    background: #f9f9f9;
-    padding: 1rem 0.2rem 0 0.2rem;
-    margin-left: 0.5rem;
-    @include type-setting(0);
-  }
-
-  &:invalid ~ label.error_label{
+  &:focus ~ label.normal,
+  &:valid ~ label.normal,
+  &:valid ~ label.normal_email,
+  &:invalid ~ label.error_label,
+  &:invalid ~ label.normal_email{
     top: -0.6rem;
     background: #f9f9f9;
     padding: 1rem 0.2rem 0 0.2rem;

@@ -63,6 +63,16 @@ html {
               @include input-theme(select-color('warning'), select-color('primary'));
             }
 
+            .icon_pass{
+              display: block;
+              position: absolute;
+              top: 2.27rem;
+              right: 1.5rem;
+              width: 1.5rem;
+              height: 1.2rem;
+              background: url("images/sprite.png");
+            }
+
             label{
               top: 0;
               left: 0;
@@ -96,6 +106,7 @@ html {
             z-index: 1;
             @include create-select;
           }
+
           .form-input.name{
             &:focus ~ label{
               top: -15px;
@@ -150,6 +161,19 @@ html {
          }
       }
       @include setting-section(40%, select-color('secondary'));
+    }
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  html {
+    body {
+      .section_left {
+        width: 100%;
+      }
+      .section_right {
+        display: none;
+      }
     }
   }
 }

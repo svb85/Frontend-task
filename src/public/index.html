@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>Set up account</title>
 </head>
 <body>
@@ -18,11 +19,11 @@
                 <form novalidate>
                     <div class="group_input">
                         <input type="text" class="form-input" required/>
-                        <label>Your name</label>
+                        <label class="normal">Your name</label>
                     </div>
                     <div class="group_input">
                         <input type="email" name="mail" id="mail" class="form-input" required/>
-                        <label>Email address</label>
+                        <label class="normal">Email address</label>
                         <span class="error" aria-live="polite"></span>
                     </div>
                     <div class="group_select">
@@ -42,8 +43,9 @@
                         </label>
                     </div>
                     <div class="group_input">
+                        <i class="icon_pass"></i>
                         <input type="password" class="form-input" required/>
-                        <label>Password</label>
+                        <label class="normal">Password</label>
                     </div>
                     <p>Minimum 8 characters</p>
                     <button type="submit" id="button_next" class="form-button_disabled" disabled>
