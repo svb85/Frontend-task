@@ -9,10 +9,8 @@ let button = document.getElementById('button_next');
 
 form.addEventListener("focus", function (event) {
     const elem = event.target;
-
     elem.addEventListener("input", function (event) {
         enabled_button(data,button);
-
         if(elem.type == 'text') {
             let val = elem.value;
             if(!val.length == 0) {
@@ -50,18 +48,13 @@ form.addEventListener("focus", function (event) {
                 data.email = undefined;
             }
         }
-
-        console.log(data.name,data.email,data.pass);
     });
 }, true);
 
 function enabled_button(data,button) {
-    console.log(data,button);
     if( data.name !== undefined && data.email !== undefined && data.pass !== undefined){
         button.className = 'form-button';
     }else{
         button.className = 'form-button_disabled'
     }
 }
-
-console.log(data.name,data.email,data.pass);
