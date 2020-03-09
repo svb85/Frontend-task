@@ -79,6 +79,9 @@ html {
             .error{
               display: none;
             }
+            .error_label {
+              color: #f54343;
+            }
             .error.active{
               display: block;
               position: absolute;
@@ -92,6 +95,12 @@ html {
           .group_select{
             z-index: 1;
             @include create-select;
+          }
+          .form-input.name{
+            &:focus ~ label{
+              top: -15px;
+              @include type-setting(-1);
+            }
           }
 
           .form-button {
@@ -113,7 +122,7 @@ html {
         a{
           @extend %a;
           @include type-setting(1);
-          @include color-links(select-color('links'));
+          @include color(select-color('links'));
 
         }
       }
@@ -124,6 +133,21 @@ html {
 
       article{
          margin: auto;
+         width: 50%;
+
+         h1{
+           font-weight: bold;
+           margin: 1rem 3rem;
+           @include type-setting(3);
+           @include color(select-color('primary'));
+         }
+
+         p{
+           font-weight: bold;
+           margin: 0 2rem;
+           @include type-setting(1);
+           @include color(select-color('primary'));
+         }
       }
       @include setting-section(40%, select-color('secondary'));
     }

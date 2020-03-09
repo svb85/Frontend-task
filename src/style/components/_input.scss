@@ -24,6 +24,14 @@ $input-bdradius: 5px;
     margin-left: 0.5rem;
     @include type-setting(0);
   }
+
+  &:invalid ~ label.error_label{
+    top: -0.6rem;
+    background: #f9f9f9;
+    padding: 1rem 0.2rem 0 0.2rem;
+    margin-left: 0.5rem;
+    @include type-setting(0);
+  }
 }
 
 @mixin input-theme($bd-color, $bg-color){
